@@ -88,12 +88,19 @@ print(pl_results['match_id'].count())
 
 """
     The pl_results DataFrame now contains all the data necessary to create tables based on a specific date, within a 
-    specific season. The function below can do this by receiving the a teams parameter and a specified list of 
+    specific season. The function below can do this by receiving the teams parameter and a specified list of 
     matches played.
-    """
+    
 
 
-# Create tables for each date of each season.
+
+    Create tables for each date of each season. All matches on or before a certain date (for instance, all matches on 
+    September 9, 2010 and any matches *in that season* with dates before that, will be included in the calculation of a
+    new table for September 9, 2010. This process will continue until we reach the desired point difference we're 
+    looking for. 
+ """
+
+
 def team_points(teams, temp_df, ppr, matchday):
 
     table = {}
@@ -131,6 +138,14 @@ def team_points(teams, temp_df, ppr, matchday):
     return table_df, matches, points_left
 
 
+"""
+    Using a specific season's results, as well as the list of teams, provided by the for loop below of PL schedules,
+    we will pass all the matches before and on each date in the season to create an updated table reflecting the results
+    of each match day. Once we've determined that the current league-leaders cannot finish below the current bottom of
+    the league, we will return these results to the below for loop.
+ """
+
+
 def get_table_on_date(df, t):
     ppr = 114
     matchday = 0
@@ -144,7 +159,14 @@ def get_table_on_date(df, t):
             return d, table, matchday
 
 
-# Create list of teams that were in the PL each season
+"""
+    Create list of teams that were in the PL each season. For each season, we will call the get_table_on_date function
+    which will make use of the team_points function to create tables for each day Premier League matches were played
+    for each season. Ultimately, we'll save these tables as well as the results of our analysis in DataFrames here in
+    this for loop. This is the driver of the entire script.
+  """
+
+
 for s in schedule_keys:
     temp_df = pl_results[pl_results['season'] == s]
     teams = temp_df['home_team'].unique()
@@ -167,6 +189,8 @@ def ui_table():
     print(pl_tables[selection])
 
 
+# When called, this function will create a scatter plot showing the number of points and matches played for each
+# league-leader at the time it reached enough points to avoid finishing in last (First - Last > Rem. Points Possible)
 def save_plot():
     print('\nCreating and saving scatter plot...')
     final_gap_df['Matches_Played'] = final_gap_df['Matches_Played'].astype(int)
@@ -176,6 +200,8 @@ def save_plot():
     ax1.savefig('pl_scatter.pdf')
 
 
+# Write the tables in the instant the league-leading team achieved this feat to an Excel file, with a tab for each
+# season. Additionally, we'll write the DataFrame showing the results of our analysis to an Excel file.
 def write_files():
     print('\nWriting output files...')
     with pd.ExcelWriter('tables.xlsx') as writer:
@@ -185,4 +211,7 @@ def write_files():
     final_gap_df.to_excel('pl_analysis.xlsx')
 
 
+# Depending on the use of the analysis, all three of the below function calls can be used or just one.
+# ui_table()
+# save_plot()
 write_files()
