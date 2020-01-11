@@ -1,4 +1,4 @@
-English Premier League - Quickest to First
+**English Premier League - Quickest to First**
 
 Given Liverpool's dominance this Premier League season (2019-2020) and that it had already accumulated enough points for it to be
 mathematically impossible to finish last in the league (20th) by December, I began to wonder how this compares to previous seasons.
@@ -15,7 +15,7 @@ The league-leading team's points and matches played when it ensured it could not
 ![](https://github.com/patrickcooper95/pl_analysis/blob/master/pl_scatter.JPG)
 
 
-Sources for the data used:
+**Sources for the data used:**
 
 [Datahub.io - sports-data](https://datahub.io/sports-data/english-premier-league#resource-english-premier-league_zip)
 
@@ -23,9 +23,10 @@ Sources for the data used:
 
 
 
-Some quick facts about reaching this milestone each season:
+**Some quick facts about reaching this milestone each season:**
 
 **On average:**
+
 Matches Played - 26
 
 Points Needed - 60
