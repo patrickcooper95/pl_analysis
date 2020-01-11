@@ -11,11 +11,8 @@ The singular Python file, pl_finish.py, provides all the code we need. Below are
 
 [Analysis Table](https://github.com/patrickcooper95/pl_analysis/blob/master/pl_analysis.xlsx)
 
-The league-leading team's points and matches played when it ensured it could not finish last (20th place).
-
-
-![The number of points the league-leading team and the matches played when enough points were reached to mathematically unable to finish
-last.](https://github.com/patrickcooper95/pl_analysis/blob/master/pl_scatter.JPG)
+The league-leading team's points and matches played when it ensured it could not finish last (20th place):
+![](https://github.com/patrickcooper95/pl_analysis/blob/master/pl_scatter.JPG)
 
 
 Sources for the data used:
