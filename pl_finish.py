@@ -2,7 +2,7 @@ import pandas as pd
 import os
 
 # Read in results data
-results_path = os.path.join('D:', 'Google Drive', 'PL Analysis', 'premier-league', 'results.csv')
+results_path = os.path.join('PL Analysis', 'premier-league', 'results.csv')
 pl_results = pd.read_csv(results_path)
 
 # Filter the DF by boolean mask to fill a newly created 'winner' column with the home team name, away team name, or draw
@@ -61,7 +61,7 @@ for key in schedule_keys:
 # Read in each csv with schedule data, dropping unnecessary columns, and mapping team names.
 # We'll also create a unique match_id by concatenating the strings in the Season, HomeTeam, and AwayTeam columns.
 for sc in schedule_keys:
-    temp_path = os.path.join('D:', 'Google Drive', 'PL Analysis', 'english-premier-league', 'data',
+    temp_path = os.path.join('PL Analysis', 'english-premier-league', 'data',
                              'season-' + sc + '_csv.csv')
     t_df = pd.read_csv(temp_path)
     t_df = t_df.drop(t_df.columns[4:], axis=1)
