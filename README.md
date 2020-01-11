@@ -21,18 +21,23 @@ Sources for the data used:
 
 [Kaggle - Zaeem Nalla](https://www.kaggle.com/zaeemnalla/premier-league#results.csv)
 
+
+
 Some quick facts about reaching this milestone each season:
 
 On average:
 Matches Played - 26
+
 Points Needed - 60
+
 Date Achieved - February 11th
+
 
 Quickest to do it: 2017-2018 Manchester City (January 20th - 24 Matches)
   - Already topped by this year's Liverpool team
 
-Fewest Points Needed: 2015-2016 Leicester City, 53
-
 Slowest to do it: 2010-2011 Manchester United (February 26th - 27 Matches)
   - In large part, due to a competitive bottom of the table, with West Ham having 25 points at the time United reached this mark.
+  
+Fewest Points Needed: 2015-2016 Leicester City, 53
 
