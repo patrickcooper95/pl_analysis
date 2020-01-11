@@ -22,4 +22,4 @@ Sources for the data used:
 
 [Datahub.io - sports-data](https://datahub.io/sports-data/english-premier-league#resource-english-premier-league_zip)
 
-[Zaeem Nalla - Kaggle](https://www.kaggle.com/zaeemnalla/premier-league#results.csv)
+[Kaggle - Zaeem Nalla](https://www.kaggle.com/zaeemnalla/premier-league#results.csv)
