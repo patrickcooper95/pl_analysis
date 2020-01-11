@@ -9,4 +9,5 @@ and look a little more into what teams were involved.
 
 The singular Python file, pl_finish.py, provides all the code we need. Below are the results:
 
-[](pl_scatter.pdf)
+
+![](https://github.com/patrickcooper95/pl_analysis/blob/master/pl_scatter.JPG)
